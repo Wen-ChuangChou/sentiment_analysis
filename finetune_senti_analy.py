@@ -70,7 +70,7 @@ training_args = TrainingArguments(
     # warmup_steps=100,  # Implement learning rate warmup
     optim="adamw_torch",
     weight_decay=0.01,
-    num_train_epochs=10,
+    num_train_epochs=3,
     save_strategy='steps',
     save_steps=500,   
     eval_strategy='steps',
@@ -79,6 +79,8 @@ training_args = TrainingArguments(
     save_total_limit=1,
     # eval_steps=50,
     # gradient_accumulation_steps=4,
+    per_device_train_batch_size=32, 
+    per_device_eval_batch_size=32,    
 )
 trainer = Trainer(
     model=model,
@@ -93,5 +95,6 @@ trainer.train()
 
 save_model_path = os.path.join("./saved_model", model_name)
 trainer.save_model(save_model_path)
+tokenizer.save_pretrained(save_model_path)
 print(f"Fine-tuned model saved to: {save_model_path}")
 
