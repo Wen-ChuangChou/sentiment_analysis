@@ -6,4 +6,7 @@ Sentiment analysis, a crucial task in natural language processing (NLP), involve
 
 ## Data
 The data used for fine-tuning and testing the Llama3 model to recognize emotions in tweets was obtained from the Massive Text Embedding Benchmark (MTEB) database. These tweets are labeled with three different sentiments: positive, neutral, and negative. The database can be downloaded from the Hugging Face datasets under the name "mteb/tweet_sentiment_extraction."
+There are 27,481 pairs of sentences in the training set and 3,534 in the test set.
 
+## Results
+Accuracy: 63.41% to 80.56%

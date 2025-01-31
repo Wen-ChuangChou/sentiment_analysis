@@ -5,3 +5,4 @@ results/
 cache/
 saved_model/
 test_trainer/
+batches/
