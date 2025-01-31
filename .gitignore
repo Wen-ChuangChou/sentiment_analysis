@@ -3,3 +3,5 @@ pretrained_llms/
 data/
 results/
 cache/
+saved_model/
+test_trainer/
